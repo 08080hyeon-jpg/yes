@@ -1,0 +1,246 @@
+:root {
+    --text-color: #333;
+    --inner-size: 1200px;
+    --gutter-size: 30px;
+    --padding-size: 120px 0;
+}
+
+body {
+    color: var(--text-color);
+}
+
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.default {
+    padding: var(--padding-size);
+}
+
+.title {
+    max-width: var(--inner-size);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.title h2 {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.title p {
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.inner {
+    max-width: var(--inner-size);
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {}
+
+.header .hd_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+}
+
+.header h1 {
+    width: 240px;
+}
+
+.header h1 a {
+    display: block;
+}
+
+.header h1 a img {
+    display: block;
+}
+
+.header .gnb>ul {
+    display: flex;
+    gap: 40px;
+}
+
+.header .gnb>ul>li>a {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.header .utils>ul {
+    display: flex;
+    gap: 8px;
+}
+
+.main_visual {
+    position: relative;
+}
+
+.main_visual .main_visual_slide .itm {
+    position: relative;
+    height: calc(100vh - 64px);
+}
+
+.main_visual .main_visual_slide .itm .slg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main_visual .main_visual_slide .itm01 {
+    background: url(../images/Rectangle\ 4.jpg) center/cover;
+}
+
+.main_visual .main_visual_slide .itm02 {
+    background: url(../images/Rectangle\ 05.jpg) center/cover;
+}
+
+.main_visual .main_visual_slide .itm03 {
+    background: url(../images/Rectangle\ 06.jpg) center/cover;
+}
+
+.slide_progress {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slide_progress .bar {
+    display: block;
+    width: 0;
+    height: 100%;
+    background: #e60023;
+}
+
+.main_info .inner {
+    display: flex;
+    gap: var(--gutter-size);
+    margin-top: 40px;
+}
+
+.main_info .inner .itm {
+    flex: 1;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.main_info .inner .itm:hover {
+    transform: translateY(-20px);
+}
+
+.main_info .inner .itm .txt_box {
+    margin-top: 16px;
+}
+
+.main_info .inner .itm .txt_box strong {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.main_info .inner .itm .txt_box p {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.main_banner {
+    position: relative;
+    background: url(../images/Rectangle\ 4.jpg) center/cover;
+    background-attachment: fixed;
+}
+
+.main_banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.main_banner .title {
+    position: relative;
+}
+
+.main_banner h2,
+.main_banner p {
+    color: #fff;
+}
+
+.main_visual .swiper-button-prev,
+.main_visual .swiper-button-next {
+    color: #fff;
+    z-index: 20;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.main_visual .swiper-button-prev {
+    left: 40px;
+}
+
+.main_visual .swiper-button-next {
+    right: 40px;
+}
+
+.main_visual .swiper-button-prev::after,
+.main_visual .swiper-button-next::after {
+    font-size: 32px;
+}
+
+.main_visual_slide {
+    position: relative;
+    height: calc(100vh - 64px);
+}
+
+
+
+.header .gnb>ul>li {
+    position: relative;
+}
+
+.header .gnb .sub {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    padding: 12px 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    display: none;
+    z-index: 100;
+}
+
+.header .gnb .sub li a {
+    display: block;
+    padding: 8px 20px;
+    font-size: 14px;
+    color: #333;
+    white-space: nowrap;
+}
+
+.header .gnb .sub li a:hover {
+    background: #f5f5f5;
+}
+
+.header .gnb>ul>li:hover .sub {
+    display: block;
+}
